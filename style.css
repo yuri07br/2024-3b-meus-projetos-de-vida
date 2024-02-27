@@ -4,10 +4,21 @@
     --verde-claro: #AACC00;
     --amarelo-escuro: #BFD200;
     --amarelo-normal: #FFFF3F;
-    -- font-titulo: "Open Sans    ",monospace;
+    -- font-titulo: "Open Sans",monospace;
     --font-texto: "Width",serfi;
 }
 
 body{
-    background-color: #55A630;
+    background-color: var(--verde-fraco);
+    color: var(--verde-claro);
+    font-family: var(--font-texto);
+}
+.conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px ;
+    width: 100%;
+    margin: 0 auto;
 }
