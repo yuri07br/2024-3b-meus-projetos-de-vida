@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans&display=swap');
+:root{
+    --verde-fraco: #55A630;
+    --verde-claro: #AACC00;
+    --amarelo-escuro: #BFD200;
+    --amarelo-normal: #FFFF3F;
+    -- font-titulo: "Open Sans    ",monospace;
+    --font-texto: "Width",serfi;
+}
+
+body{
+    background-color: #55A630;
+}
