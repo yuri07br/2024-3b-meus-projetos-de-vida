@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans&display=swap');
 :root{
-    --verde-fraco: #55A630;
-    --verde-claro: #AACC00;
-    --amarelo-escuro: #BFD200;
-    --amarelo-normal: #FFFF3F;
-    -- font-titulo: "Open Sans",monospace;
-    --font-texto: "Width",serfi;
+    --verde-fraco: #016475;
+    --verde-claro: #000000ef;
+    --amarelo-escuro: #009443;
+    --amarelo-normal: #5dffdc;
+    --font-titulo:"Open Sans",monospace;
+    --font-texto:"Width",serfi;
 }
 
 body{
@@ -22,3 +22,50 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+.titulo-principal{
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+.titulo-principal span{
+    color: var(--verde-claro);
+}
+
+.botao{
+    fonte-family: var(--font-texto);
+    font-size: 18px;
+    background-color: var(--amarelo-normal);
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 4px solid var(--verde-claro);
+    border-left: 4px solid var(--verde-claro);
+    border-right: 4px solid var(--verde-claro);
+    border-top: none;
+}
+.botoes{
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 0 0;
+}
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+}
+
+@media screen and (min-width: 768) {
+    .botoes{
+        display: flex;
+    }
+.botao:first-child{
+    border-radius: 0 40px 0 0;
+}
+.botao:last-child{
+    border-radius: 0 40px 0 0;
+}
+}
+    
