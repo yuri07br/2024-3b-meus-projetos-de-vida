@@ -44,7 +44,7 @@ body{
     border-bottom: 4px solid var(--verde-claro);
     border-left: 4px solid var(--verde-claro);
     border-right: 4px solid var(--verde-claro);
-    border-top: 4px solid var(--verde-claro);
+    border-top: none;
 }
 .botoes{
     display: block;
