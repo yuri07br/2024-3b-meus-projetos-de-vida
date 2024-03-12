@@ -5,7 +5,7 @@
     --amarelo-escuro: #009443;
     --amarelo-normal: #5dffdc;
     --font-titulo:"Open Sans",monospace;
-    --font-texto:"Width",serfi;
+    --font-texto:"Width",serif;
 }
 
 body{
@@ -32,7 +32,7 @@ body{
 }
 
 .botao{
-    fonte-family: var(--font-texto);
+    font-family: var(--font-texto);
     font-size: 18px;
     background-color: var(--amarelo-normal);
     color:black;
@@ -44,7 +44,7 @@ body{
     border-bottom: 4px solid var(--verde-claro);
     border-left: 4px solid var(--verde-claro);
     border-right: 4px solid var(--verde-claro);
-    border-top: none;
+    border-top: 4px solid var(--verde-claro);
 }
 .botoes{
     display: block;
@@ -55,6 +55,11 @@ body{
 }
 .botao:last-child{
     border-radius: 0 0 40px 40px;
+}
+
+.ativo{
+    background-color: var(--amarelo-escuro);
+    border-bottom: 4px solid var(--verde-claro);
 }
 
 @media screen and (min-width: 768) {
