@@ -1,21 +1,27 @@
+
 const botoes = document.querySelectorAll('.botao');
-const textos = document.querySelectorAll('.aba-conteudo');
+const textos = document.querySelectorAll('.aba-conteudo')
 
-const conrtadores = document.querySelector('.contador');
-const tempoObejetivo01 = new Date("2024-05-03T00:00:00");
-const tempoObejetivo02 = new Date("2024-07-07T00:00:00");
-const tempoObejetivo03 = new Date("2024-09-02T00:00:00");
-const tempoObejetivo04 = new Date("2024-09-01T00:00:00");
+const contadores = document.querySelectorAll('.contador')
 
-const tempo = [tempoObejetivo01,tempoObejetivo02,tempoObejetivo03,tempoObejetivo04]
+const tempoObjetivo01 = new Date("2024-04-03T00:00:00")
+const tempoObjetivo02 = new Date("2024-06-25T00:00:00")
+const tempoObjetivo03 = new Date("2024-07-15T00:00:00")
+const tempoObjetivo04 = new Date("2024-07-06T00:00:00")
+
+const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04];
+
+for (let i= 0; i<tempos.length; i++){
+    contadores[i].textContent = calculaTempo(tempos[i])
+}
+
 
 for(let i= 0; i<botoes.length; i++){
-    botoes[i].onclick = function (i){
+    botoes[i].onclick = function (){
 
         for(j=0; j<botoes.length; j++){
             botoes[j].classList.remove('ativo')
             textos[j].classList.remove('ativo')
-
         }
 
         botoes[i].classList.add('ativo')
@@ -23,19 +29,20 @@ for(let i= 0; i<botoes.length; i++){
     } 
 }
 
-function calculatempo (tempoObejetivo) {
+function calculaTempo (tempoObjetivo) {
 
-    let tempoAtual = new Date
-    let tempoFinal = tempoObejetivo - tempoAtual
+    let tempoAtual = new Date()
+    let tempoFinal = tempoObjetivo - tempoAtual
 
     let segundos = Math.floor(tempoFinal/1000);
     let minutos = Math.floor(segundos/60);
     let horas = Math.floor(minutos/60);
-    let dia = Math.floor(horas/24);
+    let dias = Math.floor(horas/24);
 
     segundos %= 60;
     minutos %= 60;
-    horas %=24;
+    horas %= 24;
 
-    return dia + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " segundos "
+    return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos "
+
 }
