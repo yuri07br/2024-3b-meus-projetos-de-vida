@@ -7,14 +7,22 @@ const contadores = document.querySelectorAll('.contador')
 const tempoObjetivo01 = new Date("2024-04-28T00:00:00")
 const tempoObjetivo02 = new Date("2024-06-03T00:00:00")
 const tempoObjetivo03 = new Date("2024-11-15T00:00:00")
-const tempoObjetivo04 = new Date("2024-11-31T00:00:00")
+const tempoObjetivo04 = new Date("2024-11-30T00:00:00")
 
 const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04];
 
+function atualizacronometro () {
 for (let i= 0; i<tempos.length; i++){
     contadores[i].textContent = calculaTempo(tempos[i])
 }
+}
 
+function comecacronometro() {
+atualizacronometro();
+setInterval (atualizacronometro,1000);
+}
+
+//comecacronometro();
 
 for(let i= 0; i<botoes.length; i++){
     botoes[i].onclick = function (){
@@ -43,6 +51,9 @@ function calculaTempo (tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
 
+    if(tempoFinal > 0) {
     return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos "
-
+    } else {
+        return "prazo finalizado!"
+    }
 }
