@@ -95,6 +95,28 @@ body {
     text-transform: uppercase;
 }
 
+.contador{
+    display: flex;
+    justify-content: center;
+}
+
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+}
+
+.contador-digito-numero{
+    font-size: 60px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color:var(--branco);
+    font-size: 20px;
+    
+
+}
+
 @media screen and (min-width: 768px) {
     .botoes{
         display: flex;
@@ -106,4 +128,5 @@ body {
         border-radius: 0 40px 0 0;
     }
 }
+
     
